@@ -1,0 +1,26 @@
+via CMD
+
+# Create Task
+schtasks /create /tn "TaskName" /tr "calc.exe" /sc minute /mo 1 /f
+
+# List Task
+schtasks /query /tn "TaskName"
+
+# Delete Task
+schtasks /delete /tn "TaskName" /f
+
+via Powershell
+
+# Create Task
+$action = New-ScheduledTaskAction -Execute "calc.exe"
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes 1) -RepetitionDuration ([timespan]::MaxValue)
+Register-ScheduledTask -TaskName "CalcTask" -Action $action -Trigger $trigger
+
+# List Task
+Get-ScheduledTask -TaskName "CalcTask"
+
+# Delete Task
+Unregister-ScheduledTask -TaskName "CalcTask" -Confirm:$false
+
+
+
