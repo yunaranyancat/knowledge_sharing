@@ -12,7 +12,7 @@ VB_RESERVED_KEYWORDS = [
     "CreateObject", "Trim", "Len", "Mid", "Left", "Right", "Instr", "InStr", "Replace",
     "LCase", "UCase", "Chr", "Asc", "IsNumeric", "IsEmpty", "IsNull", "Split", "Join",
     "Array", "CStr", "CInt", "CLng", "CDbl", "CDate", "CSng", "CVar", "Now", "Date", "Time",
-    "Exec", "Open", "Send", "StdOut.ReadAll", "StdOut.AtEndOfStream", "responseText",
+    "Exec", "Open", "Send", "StdOut.ReadAll", "StdOut.AtEndOfStream", "responseText", "AutoOpen", 
 ]
 
 # Create a regex pattern for reserved keywords
