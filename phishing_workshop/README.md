@@ -28,5 +28,5 @@ pip install -r requirements.txt
 source .env
 
 # Step 9: Run the Flask application
-python manage.py run --host=0.0.0.0
+python manage.py run --host=0.0.0.0 --cert=cert.pem --key=key.pem
 
