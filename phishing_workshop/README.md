@@ -1,6 +1,6 @@
 directory for upcoming phishing workshop
 
-Setting up WEBFMA
+Setting up WEBFMA in KALI VM
 
 # Step 1: Go to Desktop
 cd ~/Desktop
