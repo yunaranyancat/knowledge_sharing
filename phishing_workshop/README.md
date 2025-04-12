@@ -27,6 +27,14 @@ pip install -r requirements.txt
 # Step 8: Source the environment variables
 source .env
 
+## Adjust routing to port 5000
+# Redirect HTTP (port 80) to port 5000
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 5000
+
+# Redirect HTTPS (port 443) to port 5000
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 5000
+
+
 # Step 9: Run the Flask application
 python manage.py run --host=0.0.0.0 --cert=cert.pem --key=key.pem
 
