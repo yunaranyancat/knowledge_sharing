@@ -36,7 +36,10 @@ cd Python-3.11.0
 make -j$(nproc)                                                 
 sudo make altinstall
 ```
-python3.11 --version # Check if Python3.11 has been successfully installed
+Check if Python3.11 has been successfully installed
+```
+python3.11 --version 
+```
 ```
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.11 1
 sudo update-alternatives --config python3
