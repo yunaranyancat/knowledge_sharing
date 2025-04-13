@@ -16,6 +16,8 @@ cd webmfa
 ```
 Step 4 : Install Python 3.11
 ```
+sudo apt-get update
+
 sudo apt install -y wget build-essential libssl-dev zlib1g-dev \
 libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev \
 libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev \
