@@ -65,6 +65,7 @@ source venvmfa/bin/activate
 ```
 Step 7: Install dependencies
 ```
+cd webmfa
 pip install -r requirements.txt
 ```
 Step 8: Source the environment variables
