@@ -5,6 +5,8 @@ Setting up WEBFMA in KALI VM - KALI 2024.3
 # Step 1: Go to Desktop
 cd ~/Desktop
 
+sudo apt-get update
+
 # Step 2: Download the ZIP directly using wget
 wget https://github.com/yunaranyancat/knowledge_sharing/raw/master/phishing_workshop/webmfa.zip
 
