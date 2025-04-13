@@ -7,6 +7,8 @@ cd ~/Desktop
 
 Step 2: Download the ZIP directly using wget
 ```
+mkdir training
+cd training
 wget https://github.com/yunaranyancat/knowledge_sharing/raw/master/phishing_workshop/webmfa.zip
 ```
 Step 3: Unzip the project
