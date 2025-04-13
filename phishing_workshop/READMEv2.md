@@ -52,7 +52,6 @@ python3.11 -m pip --version
 ```
 ```
 cd ~/Desktop
-mkdir training
 cd training
 rm -rf venvmfa
 ```
